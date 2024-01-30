@@ -42,6 +42,11 @@ local plugins = {
       "windwp/nvim-autopairs",
       config = function() require("nvim-autopairs").setup {} end
     },
+    { "tiagovla/tokyodark.nvim" },
+    {
+        "nmac427/guess-indent.nvim",
+        config = function() require("guess-indent").setup {} end,
+    }
 }
 local opts = {}
 require("lazy").setup(plugins, opts)

@@ -28,6 +28,7 @@ local lspconfig = require("lspconfig")
 lspconfig.lua_ls.setup({})
 lspconfig.clangd.setup({})
 lspconfig.ols.setup({})
+lspconfig.gopls.setup({})
 
 -- global keymaps
 vim.keymap.set('n', 'gl', vim.diagnostic.open_float)
@@ -93,7 +94,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+    -- vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
     vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
     vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
     vim.keymap.set('n', '<space>wl', function()
